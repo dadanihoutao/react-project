@@ -4,7 +4,7 @@
   "description": "webpack4 + react 全家桶环境搭建",
   "main": "index.js",
   "scripts": {
-    "build": "webpack"
+    "build": "webpack --config build/webpack.config.js"
   },
   "repository": {
     "type": "git",
@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/dadanihoutao/react-project#readme",
   "devDependencies": {
+    "html-webpack-plugin": "^4.0.4",
     "webpack": "^4.42.1",
     "webpack-cli": "^3.3.11",
     "webpack-dev-server": "^3.10.3",
