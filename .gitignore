@@ -1,0 +1,9 @@
+node_modules
+*.
+*.swn
+*.swm
+*.swo
+*.swp
+*.map
+.DS_Store
+dist
