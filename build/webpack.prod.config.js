@@ -2,11 +2,14 @@ const webpackMerge = require('webpack-merge')
 const baseWebpackConfig = require('./webpack.base.config')
 const utils = require('./utils')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const {CleanWebpackPlugin} = require('clean-webpack-plugin')
 
 module.exports = webpackMerge(baseWebpackConfig, {
   mode: 'production',
   // 插件配置
   plugins: [
+    // 打包前清理dist文件插件,不用在实例中传入路径参数，默认清理dist 文件夹
+    new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       filename: utils.resolve('../dist/index.html'), // html模板的生成路径
       template: 'index.html', // html模板文件
