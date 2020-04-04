@@ -1,18 +1,26 @@
 {
   "presets": [
     ["@babel/preset-env", {
-      "modules": false,
-      "targets": {
-        // 全球浏览器使用率大于1%，最新两个版本并且是IE8以上的浏览器，加前缀 
-        "browsers": ["> 1%", "last 2 versions", "not ie <= 8"]
-      }
+        "modules": false,
+        "targets": {
+            // 全球浏览器使用率大于1%，最新两个版本并且是IE8以上的浏览器，加前缀 
+            "browsers": ["> 1%", "last 2 versions", "not ie <= 8"]
+        }
     }],
     "@babel/preset-react"
-  ],
-  "plugins": [
-    ["@babel/plugin-transform-runtime", {
-      "corejs": 2, // polyfill 需要使用@babel/runtime-corejs2
-      "useBuildIns": "usage" // 按需引入，即 使用什么新特性打包什么新特性， 可以减小打包的体积
-    }]
-  ]
+    ],
+    "plugins": [
+        ["@babel/plugin-transform-runtime", {
+            "corejs": 2, // polyfill 需要使用@babel/runtime-corejs2
+            "useBuildIns": "usage" // 按需引入，即 使用什么新特性打包什么新特性， 可以减小打包的体积
+        }],
+        "@babel/plugin-proposal-class-properties", // 支持类属性的插件（ES6新特性支持）
+        // antd ui 框架按需加载
+        ["import", {
+            "libraryName": "antd",
+            "libraryDirectory": "es",
+            "style": "css" // `style: true` 会加载 less 文件
+        }],
+        "react-html-attrs" // class 替换 className
+    ]
 }
