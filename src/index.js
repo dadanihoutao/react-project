@@ -1,17 +1,15 @@
 import React, { Component } from 'react'
 import ReactDom from 'react-dom'
+import HomePage from '@/home/home.js'
 
-class HelloMessage extends React.Component {
+class App extends Component {
   render() {
     return (
-      <div>
-        Hello {this.props.name}
+      <div style={{color: "#333"}}>
+        <HomePage/>
       </div>
-    );
+    )
   }
 }
 
-ReactDOM.render(
-  <HelloMessage name="Taylor" />,
-  document.getElementById('app')
-)
+ReactDom.render(<App/>,document.getElementById('app'))

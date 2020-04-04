@@ -1,0 +1,18 @@
+{
+  "presets": [
+    ["@babel/preset-env", {
+      "modules": false,
+      "targets": {
+        // 全球浏览器使用率大于1%，最新两个版本并且是IE8以上的浏览器，加前缀 
+        "browsers": ["> 1%", "last 2 versions", "not ie <= 8"]
+      }
+    }],
+    "@babel/preset-react"
+  ],
+  "plugins": [
+    ["@babel/plugin-transform-runtime", {
+      "corejs": 2, // polyfill 需要使用@babel/runtime-corejs2
+      "useBuildIns": "usage" // 按需引入，即 使用什么新特性打包什么新特性， 可以减小打包的体积
+    }]
+  ]
+}
