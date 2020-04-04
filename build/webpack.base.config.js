@@ -1,5 +1,6 @@
 const path = require('path')
 const utils = require('./utils')
+const CopyWebpackPlugin = require('copy-webpack-plugin')
 
 module.exports = {
     // 入口
@@ -62,5 +63,14 @@ module.exports = {
       alias: {
         '@': path.join(__dirname, '..', 'src')// 在项目中使用@符号代替src路径，导入文件路径更方便
       }
-    }
+    },
+    plugins: [
+      new CopyWebpackPlugin([
+        {
+          from: utils.resolve('../static'), // 从哪个目录copy
+          to: 'static', // copy到那个目录
+          ignore: ['.*']
+        }
+      ])
+    ]
 }
