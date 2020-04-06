@@ -8,6 +8,9 @@ const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin')
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 
 const webpackConfig = webpackMerge(baseWebpackConfig, {
+    performance: {
+        hints: false
+    },
     mode: 'production',
     devtool: 'none',
     // 插件配置
