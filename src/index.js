@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import ReactDom from 'react-dom';
+import {Provider} from 'mobx-react'
+import store from '@/store/index.js';
 import '@/assets/less/reset.less';
 import 'antd/dist/antd.css'; // or 'antd/dist/antd.less'
 import './app.less'
@@ -8,9 +10,9 @@ import AppRouter from '@/router/router';
 class App extends Component {
 	render() {
 		return (
-			<div>
+			<Provider {...store}>
 				<AppRouter />
-			</div>
+			</Provider>
 		)
 	}
 }

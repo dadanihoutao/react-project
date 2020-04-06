@@ -25,6 +25,10 @@ module.exports = webpackMerge(baseWebpackConfig, {
     publicPath: '/', // 访问资源加前缀
     proxy: {
       // 接口代理配置
+      "/api": {
+          secure: false,
+          target: "http://www.lokiblog.com/"
+      }
     }
   }
 })
