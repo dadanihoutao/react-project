@@ -4,10 +4,12 @@ import { Route, BrowserRouter, Link, Switch } from 'react-router-dom';
 import SliderMenu from '@/layout/SlideMenu.js';
 import NavigationBar from '@/layout/NavigationBar.js';
 
-import HomePage from '@/home/home';
-import BlogPage from '@/blog/blog';
-import ResumePage from '@/resume/resume';
-import UserPage from '@/user/user';
+import LoadableComponent from './loadable'
+
+const HomePage = LoadableComponent(() => import(/* webpackChunkName: 'homePage' */ '@/home/home'))
+const BlogPage = LoadableComponent(() => import(/* webpackChunkName: 'blogPage' */ '@/blog/blog'))
+const ResumePage = LoadableComponent(() => import(/* webpackChunkName: 'resumePage' */ '@/resume/resume'))
+const UserPage = LoadableComponent(() => import(/* webpackChunkName: 'userPage' */ '@/user/user'))
 
 class AppRouter extends Component {
 	render() {

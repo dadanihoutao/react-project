@@ -1,9 +1,9 @@
 import React from 'react'
-
+import './add.less'
 class AddUserPage extends React.Component {
     render(){
         return (
-            <div>
+            <div class="user-add">
                 <p>AddUserPage</p>
             </div>
         )

@@ -1,6 +1,7 @@
 import React from 'react'
-import BlogListPage from "./pages/list"
-import AddBlogPage from "./pages/add"
+import LoadableComponent from '@/router/loadable'
+const BlogListPage = LoadableComponent(() => import("./pages/list"))
+const AddBlogPage  = LoadableComponent(() => import("./pages/add"))
 
 import { Route } from 'react-router-dom'
 

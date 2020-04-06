@@ -5,6 +5,16 @@ function resolve (dir) {
   return path.resolve(__dirname, dir)
 }
 
+function isDev (){
+    return process.env.NODE_ENV === 'development';
+}
+
+function assetsPath (_path) {
+    return path.posix.join('static', _path)
+}
+
 module.exports = {
-  resolve: resolve
+  resolve: resolve,
+  isDev: isDev,
+  assetsPath: assetsPath
 }
