@@ -1,8 +1,10 @@
 module.exports = {
     "plugins": [
-      require('autoprefixer')({ 
-        // browserslist : ['last 100 versions']
-       })
+        require('postcss-import'),
+        require('postcss-url'),
+        require('autoprefixer')({ 
+            // browserslist : ['last 100 versions']
+        })
     ]
   }
   

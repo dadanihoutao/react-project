@@ -84,7 +84,7 @@ module.exports = {
 				test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
 				loader: 'url-loader',
 				options: {
-					limit: 1000, // 小于10000B的图片base64的方式引入，大于1000B的图片以路径的方式导入
+					limit: 1000, // 小于1000B的图片base64的方式引入，大于1000B的图片以路径的方式导入
 					name: utils.assetsPath('fonts/[name].[hash:7].[ext]')
 				}
 			}
