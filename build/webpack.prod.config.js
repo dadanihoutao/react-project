@@ -35,19 +35,19 @@ const webpackConfig = webpackMerge(baseWebpackConfig, {
         minimizer: [
             // 自定义js优化配置，将会覆盖默认配置
             new UglifyJsPlugin({
-                parallel: true,  //使用多进程并行运行来提高构建速度
-                sourceMap: false,
-                uglifyOptions: {
-                    warnings: false,
-                    compress: {
-                        unused: true,
-                        drop_debugger: true,
-                        drop_console: true, 
-                    },
-                    output: {
-                        comments: false // 去掉注释
-                    }
-                }
+                // parallel: true,  //使用多进程并行运行来提高构建速度
+                // sourceMap: false,
+                // uglifyOptions: {
+                //     warnings: false,
+                //     compress: {
+                //         unused: true,
+                //         drop_debugger: true,
+                //         drop_console: true, 
+                //     },
+                //     output: {
+                //         comments: false // 去掉注释
+                //     }
+                // }
             }),
             new OptimizeCSSAssetsPlugin({
                 cssProcessorOptions: { 
@@ -103,7 +103,7 @@ const webpackConfig = webpackMerge(baseWebpackConfig, {
         runtimeChunk:{
             name:'manifest' // webpack的运行文件
         }
-    }å
+    }
 })
 if (process.env.npm_config_report) {
     // 打包分析插件

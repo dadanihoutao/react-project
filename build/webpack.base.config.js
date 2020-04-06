@@ -1,8 +1,10 @@
 const path = require('path');
+const webpack = require('webpack')
 const utils = require('./utils');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
+const NODE_ENV_VALUE = process.env.NODE_ENV;
 
 module.exports = {
 	// 入口
@@ -98,6 +100,11 @@ module.exports = {
 		}
 	},
 	plugins: [
+        new webpack.DefinePlugin({
+            "process.env": {
+                NODE_ENV: JSON.stringify(process.env.NODE_ENV)
+            }
+        }),
 		new CopyWebpackPlugin([
 			{
 				from: utils.resolve('../static'), // 从哪个目录copy
