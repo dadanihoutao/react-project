@@ -9,6 +9,7 @@ const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 
 const webpackConfig = webpackMerge(baseWebpackConfig, {
     mode: 'production',
+    devtool: 'none',
     // 插件配置
     plugins: [
         // 打包前清理dist文件插件,不用在实例中传入路径参数，默认清理dist 文件夹
