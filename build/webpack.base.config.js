@@ -7,7 +7,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 module.exports = {
 	// 入口
 	entry: {
-		app: './src/index.js'
+		app: './src/main.js'
 	},
 	// 出口
 	output: {
