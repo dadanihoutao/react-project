@@ -1,4 +1,4 @@
-import UserListStore from '@/user/store/UserList'
+import UserListStore from '@/views/user/store/UserList'
 
 const store = {
     UserListStore

@@ -11,14 +11,18 @@ module.exports = {
 	},
 	// 出口
 	output: {
-		// 输出文件名， contenthash:5 自动添加5位hash后缀
-        filename: utils.assetsPath("js/[name].[hash:7].js") ,
-        chunkFilename: utils.assetsPath("js/[name].[chunkhash:7].js"),
 		// 输出路径
 		path: utils.resolve('../dist'),
 		// 打包后的资源的访问路径前缀
-		publicPath: '/'
-	},
+		publicPath: '/',
+		// 输出文件名， contenthash:7 自动添加7位hash后缀
+        filename: utils.assetsPath('js/[name].[hash:7].js') ,
+        chunkFilename: utils.assetsPath('js/[name].[chunkhash:7].js')
+    },
+    // 使用 CDN 引入，配置externals
+    externals: {
+        // react: 'react'
+    },
 	// 各种模块解析配置
 	module: {
 		rules: [
@@ -64,16 +68,24 @@ module.exports = {
 				test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
 				loader: 'url-loader',
 				options: {
-					limit: 10000, // url-loader 包含file-loader，这里不用file-loader, 小于10000B的图片base64的方式引入，大于10000B的图片以路径的方式导入
-					name: 'static/img/[name].[hash:7].[ext]'
+					limit: 1000, // url-loader 包含file-loader，这里不用file-loader, 小于1000B的图片base64的方式引入，大于10000B的图片以路径的方式导入
+					name: utils.assetsPath('img/[name].[hash:7].[ext]')
 				}
-			},
+            },
+            {
+                test: /\.(mp4|webm|ogg|mp3|wav|flac|aac)(\?.*)?$/,
+                loader: 'url-loader',
+                options: {
+                  limit: 1000,
+                  name: utils.assetsPath('media/[name].[hash:7].[ext]')
+                }
+            },
 			{
 				test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
 				loader: 'url-loader',
 				options: {
-					limit: 10000, // 小于10000B的图片base64的方式引入，大于10000B的图片以路径的方式导入
-					name: 'static/fonts/[name].[hash:7].[ext]'
+					limit: 1000, // 小于10000B的图片base64的方式引入，大于1000B的图片以路径的方式导入
+					name: utils.assetsPath('fonts/[name].[hash:7].[ext]')
 				}
 			}
 		]

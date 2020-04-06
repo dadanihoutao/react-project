@@ -7,14 +7,14 @@ import './list.less'
 @inject("UserListStore") // 注入mobx实例到props
 @observer // UserListStore实例和组件双向绑定
 class UserListPage extends React.Component {
-    componentDidMount () {
+    UNSAFE_componentWillMount () {
         const {UserListStore} = this.props
         UserListStore.getUserList()
     }
 
-    push = ()=>{
-        this.props.history.push("/user/add?name=231");
-    }
+    // push = ()=>{
+    //     this.props.history.push("/user/add?name=231");
+    // }
     // setName = ()=>{
     //     const {UserListStore} = this.props;
     //     UserListStore.setName("ha ha ha")
