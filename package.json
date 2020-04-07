@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack-dev-server --inline --progress --config build/webpack.dev.config.js",
     "build": "cross-env NODE_ENV=production node build/build.js",
+    "build-test": "npm run build test",
     "analyz": "cross-env NODE_ENV=production npm_config_report=true npm run build"
   },
   "repository": {

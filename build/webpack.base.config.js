@@ -102,7 +102,9 @@ module.exports = {
 	plugins: [
         new webpack.DefinePlugin({
             "process.env": {
-                NODE_ENV: JSON.stringify(process.env.NODE_ENV)
+                // 配置测试环境变量的时候NODE_ENV 不要设置成 test，会影响打包大小，另外生命了一个APP_ENV用来设置测试环境变量
+                NODE_ENV: JSON.stringify(process.env.NODE_ENV),
+                APP_ENV: JSON.stringify(process.argv[2])
             }
         }),
 		new CopyWebpackPlugin([
