@@ -7,8 +7,24 @@ webpack4 + react 全家桶环境搭建
 
 # 还没有配置eslint
 
-# 未设置打包测试环境代码
+### 本地服务器启动命令
+```javascript
+npm run dev
+```
+### 打包测试命令
+```javascript
+npm run build-test
+```
 
+### 打包正式命令
+```javascript
+npm run build
+```
+
+### 查看正式环境包模块分析命令(打包完成后，打包分析插件会自动打开浏览器)
+```javascript
+npm run analyz
+```
 
 # 如果不想使用 新版的生命周期函数 请自行降低react 版本
 

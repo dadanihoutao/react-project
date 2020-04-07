@@ -42,6 +42,7 @@ module.exports = {
                         options: {
                             hmr: utils.isDev(), // 开发的时候，修改css热更新，但是试了下不起作用
                             reloadAll: true,
+                            sourceMap: true
                         }
                     },
                     { 
@@ -58,7 +59,8 @@ module.exports = {
                         options: {
                             hmr: utils.isDev(), // 开发的时候，修改css热更新，但是试了下不起作用
                             //  如果hmr不起作用，则这是一种强制方法。
-                            reloadAll: true
+                            reloadAll: true,
+                            sourceMap: true
                         }
                     },
                     { loader: 'css-loader' },
