@@ -12,6 +12,9 @@ const devWebpackConfig = webpackMerge(baseWebpackConfig, {
     // 设置构建环境为开发环境
     mode: 'development',
     devtool: 'inline-source-map',
+    module: {
+        rules: utils.cssLoaders({extract: false, sourceMap: true})
+    },
     // 插件配置
     plugins: [
         new HtmlWebpackPlugin({

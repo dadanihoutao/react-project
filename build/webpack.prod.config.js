@@ -13,6 +13,9 @@ const webpackConfig = webpackMerge(baseWebpackConfig, {
     },
     mode: 'production',
     devtool: 'none',
+    module: {
+        rules: utils.cssLoaders({extract: true, sourceMap: false})
+    },
     // 插件配置
     plugins: [
         // 打包前清理dist文件插件,不用在实例中传入路径参数，默认清理dist 文件夹
@@ -35,19 +38,19 @@ const webpackConfig = webpackMerge(baseWebpackConfig, {
         minimizer: [
             // 自定义js优化配置，将会覆盖默认配置
             new UglifyJsPlugin({
-                // parallel: true,  //使用多进程并行运行来提高构建速度
-                // sourceMap: false,
-                // uglifyOptions: {
-                //     warnings: false,
-                //     compress: {
-                //         unused: true,
-                //         drop_debugger: true,
-                //         drop_console: true, 
-                //     },
-                //     output: {
-                //         comments: false // 去掉注释
-                //     }
-                // }
+                parallel: true,  //使用多进程并行运行来提高构建速度
+                sourceMap: false,
+                uglifyOptions: {
+                    warnings: false,
+                    compress: {
+                        unused: true,
+                        drop_debugger: true,
+                        drop_console: true, 
+                    },
+                    output: {
+                        comments: false // 去掉注释
+                    }
+                }
             }),
             new OptimizeCSSAssetsPlugin({
                 cssProcessorOptions: { 
