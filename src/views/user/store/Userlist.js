@@ -19,6 +19,10 @@ class UserListStore {
         const reuslt = await axios(config)
         if (reuslt.data.code === 200) {
             const userList = reuslt.data.data;
+            userList.forEach(item => {
+                item.key = item.key + '123123132'
+            })
+
             this.userList = userList
         }
     }

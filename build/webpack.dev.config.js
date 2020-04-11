@@ -1,3 +1,4 @@
+const webpack = require('webpack')
 const webpackMerge = require('webpack-merge')
 const baseWebpackConfig = require('./webpack.base.config')
 const utils = require('./utils')
@@ -17,6 +18,7 @@ const devWebpackConfig = webpackMerge(baseWebpackConfig, {
     },
     // 插件配置
     plugins: [
+        new webpack.HotModuleReplacementPlugin(),
         new HtmlWebpackPlugin({
             filename: utils.resolve('../dist/index.html'), // html模板的生成路径
             template: 'index.html', // html模板文件
@@ -26,6 +28,7 @@ const devWebpackConfig = webpackMerge(baseWebpackConfig, {
     ],
     // 开发环境本地启动的服务配置
     devServer: {
+        clientLogLevel: 'warning', // 只有编译警告的时候才会在浏览器控制台打印log
         // open: true, // 自动打开浏览器
         host: HOST || '0.0.0.0',
         historyApiFallback: true, // 当找不到路径的时候，默认加载index.html文件
@@ -35,6 +38,7 @@ const devWebpackConfig = webpackMerge(baseWebpackConfig, {
         port: PORT || '8081', // 端口号
         publicPath: '/', // 访问资源加前缀
         quiet: true, // 编译信息不被写入到控制台
+        // overlay: true, // 编译错误或者警告，全屏覆盖提示
         proxy: {
             // 接口代理配置
             "/api": {
