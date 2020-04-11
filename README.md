@@ -1,7 +1,6 @@
 # react-project
 webpack4 + react 全家桶环境搭建
 
-# 还没有抽取css-loader 等
 
 # 还没有设置react 热更新
 
