@@ -33,41 +33,6 @@ module.exports = {
 				exclude: /node_modules/,
 				loader: 'babel-loader'
 			},
-			// {
-			// 	test: /\.css$/,
-			// 	use: [
-            //         // { loader: 'style-loader' },
-            //         {
-            //             loader: MiniCssExtractPlugin.loader,
-            //             options: {
-            //                 hmr: utils.isDev(), // 开发的时候，修改css热更新，但是试了下不起作用
-            //                 reloadAll: true,
-            //                 sourceMap: true
-            //             }
-            //         },
-            //         { 
-            //             loader: 'css-loader',
-            //             options: {importLoaders: 1}
-            //         } 
-            //     ]
-			// },
-			// {
-			// 	test: /\.less$/,
-			// 	use: [
-            //         { 
-            //             loader: MiniCssExtractPlugin.loader,
-            //             options: {
-            //                 hmr: utils.isDev(), // 开发的时候，修改css热更新，但是试了下不起作用
-            //                 //  如果hmr不起作用，则这是一种强制方法。
-            //                 reloadAll: true,
-            //                 sourceMap: true
-            //             }
-            //         },
-            //         { loader: 'css-loader' },
-            //         { loader: 'postcss-loader' },
-            //         { loader: 'less-loader' }
-            //     ]
-			// },
 			{
 				test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
 				loader: 'url-loader',
