@@ -1,9 +1,6 @@
 # react-project
 webpack4 + react 全家桶环境搭建
 
-
-# 还没有设置react 热更新
-
 # 还没有配置eslint
 
 ### 本地服务器启动命令
