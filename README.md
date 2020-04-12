@@ -64,7 +64,7 @@ webpack4 + react 全家桶环境搭建
 ## 使用
 项目clone 到本地
 ```javacript
-git clone  https://github.com/dadanihoutao/react-project.git
+git clone https://github.com/dadanihoutao/react-project.git
 ```
 安装依赖
 ```javacript
