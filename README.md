@@ -9,7 +9,8 @@ webpack4 + react 全家桶环境搭建
 - axios 前后端数据交互
 - eslint 代码规范检测
 - less 书写 style 样式
--  babel-plugin-import antd 组件的按需加载
+- react-html-attrs 插件使用class 替换掉 className
+- babel-plugin-import antd 组件的按需加载
 - webpack4 splitChunks 实现代码拆分，常用静态资源包拆分并缓存
 - webpack4 minimizer 中配置 压缩js，css 代码
 - webpack-bundle-analyzer 插件实现代码打包分析
