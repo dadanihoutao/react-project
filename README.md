@@ -36,25 +36,25 @@ webpack4 + react 全家桶环境搭建
 #### 目录简介
 ```javascript
 --build/
-	build.js // 执行npm run build 打包命令执行文件入口
-	utils.js // webpack 配置中提取的公共方法
-	webpack.base.config.js // webpack 公共基础配置
-	webpack.dev.config.js // webpack 开发环境配置
-	webpack.prod.config.js // webpack 测试正式打包配置
+  |-build.js // 执行npm run build 打包命令执行文件入口
+  |-utils.js // webpack 配置中提取的公共方法
+  |-webpack.base.config.js // webpack 公共基础配置
+  |-webpack.dev.config.js // webpack 开发环境配置
+  |-webpack.prod.config.js // webpack 测试正式打包配置
 --config/
-	env.js // 开发测试生产，不同环境配置的全局变量
+  |-env.js // 开发测试生产，不同环境配置的全局变量
 --src/
-	assets
-		images // 图片
-		less // 全局less，less变量文件
+  |-assets
+	  |-images // 图片
+	  |-less // 全局less，less变量文件
 --router/
-	loadable.js // react-loadable 按需加载插件封装
-	router.config.js // 测导航栏数据文件
-	router.js // 路由配置文件
+  |-loadable.js // react-loadable 按需加载插件封装
+  |-router.config.js // 测导航栏数据文件
+  |-router.js // 路由配置文件
 --store/
-	index.js // mobx全局状态文件
+  |-index.js // mobx全局状态文件
 --utils/
-	request.js // axios 全局拦截器配置文件
+  |-request.js // axios 全局拦截器配置文件
 --views/ // 项目页面目录
 --app.less  // 全局样式
 --main.js // 项目入口文件
