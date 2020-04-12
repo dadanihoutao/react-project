@@ -10,23 +10,17 @@ class UserListPage extends React.Component {
     UNSAFE_componentWillMount () {
         const {UserListStore} = this.props
         UserListStore.getUserList()
+        this.init()
     }
-
-    // push = ()=>{
-    //     this.props.history.push("/user/add?name=231");
-    // }
-    // setName = ()=>{
-    //     const {UserListStore} = this.props;
-    //     UserListStore.setName("ha ha ha")
-    // }
+    async init () {
+        const config = {method: 'get', url: '/category/list'}
+        let res = await this.$axios(config)
+        console.log(res)
+    }
     render(){
         const {UserListStore} = this.props;
         return (
             <div class="list">
-                {/* <p>UserListPage</p>
-                <p>组件：{UserListStore.name}</p>
-                <Button onClick={this.push}>添加用户</Button>
-                <Button onClick={this.setName}>修改名字</Button> */}
                 {
                     UserListStore.userList.map((item,index)=><p key={index}>{item.key}</p>)
                 }

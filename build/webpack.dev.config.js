@@ -41,10 +41,10 @@ const devWebpackConfig = webpackMerge(baseWebpackConfig, {
         // overlay: true, // 编译错误或者警告，全屏覆盖提示
         proxy: {
             // 接口代理配置
-            "/api": {
-                secure: false,
-                target: "http://www.lokiblog.com/"
-            }
+            // "/api": {
+            //     secure: false,
+            //     target: "http://www.lokiblog.com/"
+            // }
         }
     }
 })

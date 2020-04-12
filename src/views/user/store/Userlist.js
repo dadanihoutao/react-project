@@ -1,3 +1,4 @@
+import React, {Component} from 'react'
 import { observable, action } from 'mobx'
 import axios from 'axios'
 
@@ -12,11 +13,10 @@ class UserListStore {
     //     this.name = name;
     // }
     async getUserList () {
-        const config = {method: 'get', url: '/api/category/list', headers: {
-            "Content-Type": "application/x-www-form-urlencoded",
-            "Authorization": "Bearer undefined"
-        }}
+        console.log(this.$axios)
+        const config = {method: 'get', url: '/category/list'}
         const reuslt = await axios(config)
+        console.log(reuslt)
         if (reuslt.data.code === 200) {
             const userList = reuslt.data.data;
             userList.forEach(item => {
