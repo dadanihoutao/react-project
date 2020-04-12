@@ -45,8 +45,8 @@ webpack4 + react 全家桶环境搭建
   |-env.js // 开发测试生产，不同环境配置的全局变量
 --src/
   |-assets
-	  |-images // 图片
-	  |-less // 全局less，less变量文件
+	|-images // 图片
+	|-less // 全局less，less变量文件
 --router/
   |-loadable.js // react-loadable 按需加载插件封装
   |-router.config.js // 测导航栏数据文件
