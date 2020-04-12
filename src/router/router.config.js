@@ -1,39 +1,39 @@
 const routes = [
-	{
-		title: '简历管理',
-		icon: 'iconall',
-		path: '/resume'
-	},
-	{
-		title: '用户管理',
-		icon: 'iconall',
-		path: '/user',
-		childern: [
-			{
-				title: '用户列表',
-				path: '/user/list'
-			},
-			{
-				title: '添加用户',
-				path: '/user/add'
-			}
-		]
-	},
-	{
-		title: '博客管理',
-		icon: 'iconall',
-		path: '/blog',
-		childern: [
-			{
-				title: '博客列表',
-				path: '/blog/list'
-			},
-			{
-				title: '添加博客',
-				path: '/blog/add'
-			}
-		]
-	}
+    {
+        title: '简历管理',
+        icon: 'iconall',
+        path: '/resume'
+    },
+    {
+        title: '用户管理',
+        icon: 'iconall',
+        path: '/user',
+        childern: [
+            {
+                title: '用户列表',
+                path: '/user/list'
+            },
+            {
+                title: '添加用户',
+                path: '/user/add'
+            }
+        ]
+    },
+    {
+        title: '博客管理',
+        icon: 'iconall',
+        path: '/blog',
+        childern: [
+            {
+                title: '博客列表',
+                path: '/blog/list'
+            },
+            {
+                title: '添加博客',
+                path: '/blog/add'
+            }
+        ]
+    }
 ]
 
-export default routes;
+export default routes

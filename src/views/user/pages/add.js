@@ -1,7 +1,7 @@
 import React from 'react'
 import './add.less'
 class AddUserPage extends React.Component {
-    render(){
+    render () {
         return (
             <div class="user-add">
                 <p>AddUserPage</p>
@@ -10,5 +10,4 @@ class AddUserPage extends React.Component {
     }
 }
 
-export default AddUserPage;
-
+export default AddUserPage

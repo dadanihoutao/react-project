@@ -38,7 +38,7 @@ const devWebpackConfig = webpackMerge(baseWebpackConfig, {
         port: PORT || '8081', // 端口号
         publicPath: '/', // 访问资源加前缀
         quiet: true, // 编译信息不被写入到控制台
-        // overlay: true, // 编译错误或者警告，全屏覆盖提示
+        overlay: true, // 编译错误或者警告，全屏覆盖提示
         proxy: {
             // 接口代理配置
             // "/api": {

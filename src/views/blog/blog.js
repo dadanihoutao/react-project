@@ -6,7 +6,7 @@ const AddBlogPage  = LoadableComponent(() => import("./pages/add"))
 import { Route } from 'react-router-dom'
 
 export default class BlogIndex extends React.Component {
-    render(){
+    render () {
         return (
             <div>
                 <p>BlogIndex</p>

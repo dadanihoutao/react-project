@@ -1,12 +1,17 @@
 import React from 'react'
 import {withRouter} from 'react-router-dom'
-import {Button} from "antd"
 import { inject , observer} from "mobx-react"
 import './list.less'
 
 @inject("UserListStore") // 注入mobx实例到props
 @observer // UserListStore实例和组件双向绑定
 class UserListPage extends React.Component {
+    constructor (props) {
+        super(props)
+        this.data = {
+            res: {}
+        }
+    }
     UNSAFE_componentWillMount () {
         const {UserListStore} = this.props
         UserListStore.getUserList()
@@ -15,10 +20,10 @@ class UserListPage extends React.Component {
     async init () {
         const config = {method: 'get', url: '/category/list'}
         let res = await this.$axios(config)
-        console.log(res)
+        this.setState({res})
     }
-    render(){
-        const {UserListStore} = this.props;
+    render () {
+        const {UserListStore} = this.props
         return (
             <div class="list">
                 {
@@ -29,5 +34,4 @@ class UserListPage extends React.Component {
     }
 }
 
-export default withRouter(UserListPage);
-
+export default withRouter(UserListPage)

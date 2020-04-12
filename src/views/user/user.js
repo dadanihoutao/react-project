@@ -11,14 +11,13 @@ export default class User extends Component {
         super(props)
     }
     render () {
-        // console.log(this.$axios)
         return (
-        <div className="test test2">
-            <p>user pagesaaa</p>
-            {/* 子路由 */}
-            <Route path="/user/list" component={UserListPage} />
-            <Route path="/user/add" component={AddUserPage} />
-        </div>
+            <div className="test test2">
+                <p>user pagesaaa</p>
+                {/* 子路由 */}
+                <Route path="/user/list" component={UserListPage} />
+                <Route path="/user/add" component={AddUserPage} />
+            </div>
         )
     }
 }

@@ -4,4 +4,4 @@ const store = {
     UserListStore
 }
 
-export default store;
+export default store

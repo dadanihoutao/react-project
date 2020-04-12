@@ -1,6 +1,5 @@
 import axios from 'axios'
-import React, {Component} from 'react'
-import { message, Spin, Alert } from 'antd'
+import {Component} from 'react'
 import {CONFIG} from '../../config/env'
 
 axios.defaults.baseURL = CONFIG.baseURL

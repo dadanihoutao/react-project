@@ -28,6 +28,17 @@ module.exports = {
 	// 各种模块解析配置
 	module: {
 		rules: [
+            {
+                test: /\.(js|jsx)$/,
+                loader: 'eslint-loader',
+                enforce: 'pre', // 编译前检测
+                exclude: /node_modules/, // 不检测的文件
+                include: /src/, // 指定检测的目录
+                options: { // 这里的配置项参数江湖ui被传递到eslint 的CLIEngine
+                    formatter: require('eslint-friendly-formatter'), // 指定错误报告的格式规范
+                    emitWarning: true
+                }
+            },
 			{
 				test: /\.(js|jsx)$/,
 				exclude: /node_modules/,
