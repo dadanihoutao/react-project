@@ -27,9 +27,12 @@ module.exports = {
         "class-property"
     ],
     "settings": {
-        'import/resolver': {
+        "react": {
+            version: "detect"
+        },
+        "import/resolver": {
             webpack: {
-                config: './build/webpack.dev.config.js',
+                config: "'./build/webpack.dev.config.js",
             }
         },
     },
