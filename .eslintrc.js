@@ -32,10 +32,12 @@ module.exports = {
         "class-property"
     ],
     "settings": {
-        'import/resolver': {
-            // 识别 webpack 配置的路径别名
+        "react": {
+            version: "detect"
+        },
+        "import/resolver": {
             webpack: {
-                config: './build/webpack.dev.config.js',
+                config: "'./build/webpack.dev.config.js",
             }
         },
     },
