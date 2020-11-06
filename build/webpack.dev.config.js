@@ -26,7 +26,7 @@ const devWebpackConfig = webpackMerge(baseWebpackConfig, {
     devServer: {
         clientLogLevel: 'warning',
         // open: true,
-        host: HOST || '0.0.0.0',
+        host: HOST || '127.0.0.1',
         historyApiFallback: true,
         hot: true,
         contentBase: false,
