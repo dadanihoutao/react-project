@@ -20,8 +20,7 @@ const devWebpackConfig = webpackMerge(baseWebpackConfig, {
         new HtmlWebpackPlugin({
             filename: utils.resolve('../dist/index.html'),
             template: 'index.html',
-        }),
-        new FriendlyErrorsWebpackPlugin()
+        })
     ],
     devServer: {
         clientLogLevel: 'warning',

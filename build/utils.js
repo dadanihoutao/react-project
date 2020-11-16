@@ -1,4 +1,5 @@
 const path = require('path')
+const packageConfig = require('../package.json')
 const MiniCssExtractPlugin = require("mini-css-extract-plugin")
 
 exports.resolve = (dir) => {
